@@ -17,7 +17,7 @@ class FaceDetector_Handler(BaseHandler):
             'clip': False 
         }
 
-        self.model_path=""
+        self.model_path="FaceDetecor.onnx"
         self.providers = ['CPUExecutionProvider']
         self.session = onnxruntime.InferenceSession(self.model_path, providers=self.providers)
     def initialize(self, context):
