@@ -14,9 +14,9 @@ class FaceDetector_Handler(BaseHandler):
             'min_sizes': [[16, 32], [64, 128], [256, 512]],
             'steps': [8, 16, 32],
             'variance': [0.1, 0.2],
-            'clip': False 
+            'clip': False  
         }
-
+        self.data_meta=None
         self.model_path="FaceDetecor.onnx"
         self.providers = ['CPUExecutionProvider']
         self.session = onnxruntime.InferenceSession(self.model_path, providers=self.providers)
